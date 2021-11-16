@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "739566247413",
+    "project_id": "pokegame-f7dad",
+    "storage_bucket": "pokegame-f7dad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739566247413:android:8d978a5071bac5fa3b14bc",
+        "android_client_info": {
+          "package_name": "com.madi.pokegame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739566247413-rbjthiuau8n8mis69jcia41mv90h3v4e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVlpzZ6gaVLH_Gea9dZsboHioAdekIyIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739566247413-rbjthiuau8n8mis69jcia41mv90h3v4e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
