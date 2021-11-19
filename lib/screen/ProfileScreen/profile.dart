@@ -65,122 +65,129 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
             ),
             const Positioned(
                 top: 80,
-                left: 20,
+                left: 30,
                 child: Text('Profile', style: kTitleDecoration)),
             Positioned(
               top: 160,
               bottom: 0,
               width: size.width,
-              child: Column(
-                children: <Widget>[
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      const SizedBox(height: 20),
-                      Text('Trainer information',
-                          style: kTitleDecoration.copyWith(fontSize: 22)),
-                      const SizedBox(height: 20),
-                      Image.asset('assets/img/trainer_icon.png',
-                          width: 100, fit: BoxFit.fitWidth),
-                      const SizedBox(height: 20),
-                      Row(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text('First pokémon: ', style: kAttributes),
-                          pokemons.isNotEmpty
-                              ? Flexible(
-                                  child: SizedBox(
-                                      child: Text(pokemons[0].name,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          const SizedBox(height: 20),
+                          Text('Trainer information',
+                              style: kTitleDecoration.copyWith(fontSize: 22)),
+                          const SizedBox(height: 20),
+                          Image.asset('assets/img/trainer_icon.png',
+                              width: 100, fit: BoxFit.fitWidth),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text('First pokémon: ', style: kAttributes),
+                              pokemons.isNotEmpty
+                                  ? Flexible(
+                                      child: SizedBox(
+                                          child: Text(pokemons[0].name,
+                                              style: kAttributes.copyWith(
+                                                  fontWeight:
+                                                      FontWeight.bold))))
+                                  : Flexible(
+                                      child: SizedBox(
+                                        child: Text(
+                                          "You still haven't caught a pokémon",
                                           style: kAttributes.copyWith(
-                                              fontWeight: FontWeight.bold))))
-                              : Flexible(
-                                  child: SizedBox(
-                                    child: Text(
-                                      "You still haven't caught a pokémon",
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    )
+                            ],
+                          ),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'Last pokémon: ',
+                                style: kAttributes,
+                                textAlign: TextAlign.left,
+                              ),
+                              pokemons.isNotEmpty
+                                  ? Flexible(
+                                      child: SizedBox(
+                                        child: Text(
+                                            pokemons[pokemons.length - 1].name,
+                                            style: kAttributes.copyWith(
+                                                fontWeight: FontWeight.bold)),
+                                      ),
+                                    )
+                                  : Flexible(
+                                      child: SizedBox(
+                                        child: Text(
+                                            "You still haven't caught a pokémon",
+                                            style: kAttributes.copyWith(
+                                                fontWeight: FontWeight.bold)),
+                                      ),
+                                    )
+                            ],
+                          ),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                "You've caught: ",
+                                style: kAttributes,
+                                textAlign: TextAlign.left,
+                              ),
+                              pokemons.isNotEmpty
+                                  ? Text('${groupPokemons.length} pokémons',
                                       style: kAttributes.copyWith(
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold))
+                                  : Flexible(
+                                      child: SizedBox(
+                                        child: Text(
+                                            "You still haven't caught a pokémon",
+                                            style: kAttributes.copyWith(
+                                                fontWeight: FontWeight.bold)),
+                                      ),
+                                    )
+                            ],
+                          ),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'Total attempts: ',
+                                style: kAttributes,
+                                textAlign: TextAlign.left,
+                              ),
+                              pokemons.isNotEmpty
+                                  ? Text(pokemons.length.toString(),
+                                      style: kAttributes.copyWith(
+                                          fontWeight: FontWeight.bold))
+                                  : Flexible(
+                                      child: SizedBox(
+                                        child: Text(
+                                            "You still haven't caught a pokémon",
+                                            style: kAttributes.copyWith(
+                                                fontWeight: FontWeight.bold)),
+                                      ),
                                     ),
-                                  ),
-                                )
-                        ],
-                      ),
-                      const SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Last pokémon: ',
-                            style: kAttributes,
-                            textAlign: TextAlign.left,
+                            ],
                           ),
-                          pokemons.isNotEmpty
-                              ? Flexible(
-                                  child: SizedBox(
-                                    child: Text(
-                                        pokemons[pokemons.length - 1].name,
-                                        style: kAttributes.copyWith(
-                                            fontWeight: FontWeight.bold)),
-                                  ),
-                                )
-                              : Flexible(
-                                  child: SizedBox(
-                                    child: Text(
-                                        "You still haven't caught a pokémon",
-                                        style: kAttributes.copyWith(
-                                            fontWeight: FontWeight.bold)),
-                                  ),
-                                )
                         ],
                       ),
-                      const SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'You own: ',
-                            style: kAttributes,
-                            textAlign: TextAlign.left,
-                          ),
-                          pokemons.isNotEmpty
-                              ? Text('${groupPokemons.length} pokémons',
-                                  style: kAttributes.copyWith(
-                                      fontWeight: FontWeight.bold))
-                              : Flexible(
-                                  child: SizedBox(
-                                    child: Text(
-                                        "You still haven't caught a pokémon",
-                                        style: kAttributes.copyWith(
-                                            fontWeight: FontWeight.bold)),
-                                  ),
-                                )
-                        ],
-                      ),
-                      const SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Attempts: ',
-                            style: kAttributes,
-                            textAlign: TextAlign.left,
-                          ),
-                          pokemons.isNotEmpty
-                              ? Text(pokemons.length.toString(),
-                                  style: kAttributes.copyWith(
-                                      fontWeight: FontWeight.bold))
-                              : Flexible(
-                                  child: SizedBox(
-                                    child: Text(
-                                        "You still haven't caught a pokémon",
-                                        style: kAttributes.copyWith(
-                                            fontWeight: FontWeight.bold)),
-                                  ),
-                                ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

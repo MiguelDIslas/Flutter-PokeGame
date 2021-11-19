@@ -62,7 +62,7 @@ class _PokedexState extends State<Pokedex> with SingleTickerProviderStateMixin {
             ),
             const Positioned(
                 top: 80,
-                left: 20,
+                left: 30,
                 child: Text('Pokédex', style: kTitleDecoration)),
             Positioned(
               top: 160,
