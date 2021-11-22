@@ -1,4 +1,4 @@
-package com.madi.pokegame
+package com.madi.pokedex
 
 import io.flutter.embedding.android.FlutterActivity
 
