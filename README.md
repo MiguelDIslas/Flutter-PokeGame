@@ -1,16 +1,13 @@
-# pokegame
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h1>Privacy Policy for PokéGame - Pokédex</h1>
+    <p>
+      If you require any more information or have any questions about our
+      privacy policy, please feel free to contact us by email at
+      miguelangelde15@gmail.com.
+    </p>
+    <p>This app don't srore any user data.</p>
+    <p>The only information it collects is when a pokémon is caught.</p>
+  </body>
+</html>
